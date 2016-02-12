@@ -1,0 +1,28 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: 5vision
+email: 5visionteam@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+    Team is based in Russia, with some of the people in Moscow and others in St. Petersburg.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://5vision.github.io" # the base hostname & protocol for your site
+github_username:  5vision
+#twitter_username: 5vision
+
+highlighter: rouge
+
+# Build settings
+markdown: kramdown
+
+kramdown:
+  # The following is untested, suppossed to work once Github gets Kramdown 1.6...
+  # (current visible at https://pages.github.com/versions)
+  math_engine: mathjax  # default in Kramdown
+  #math_engine_opts:
+  #  preview: true   # not default but better acessibility

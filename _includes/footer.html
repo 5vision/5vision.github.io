@@ -1,0 +1,51 @@
+<footer class="site-footer">
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+          <li><p class="rss-subscribe">Subscribe to blog <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          {% if site.github_username %}
+          <li>
+            {% include icon-github.html username=site.github_username %}
+          </li>
+          {% endif %}
+          {% if site.twitter_username %}
+          <li>
+            {% include icon-twitter.html username=site.twitter_username %}
+          </li>
+          {% endif %}
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>{{ site.description }}</p>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    var scripts = document.getElementsByTagName("script");
+    for (var i = 0; i < scripts.length; i++) {
+      /* TODO: keep going after an individual parse error. */
+      var script = scripts[i];
+      if (script.type.match(/^math\/tex/)) {
+        var text = script.text === "" ? script.innerHTML : script.text;
+        var options = script.type.match(/mode\s*=\s*display/) ?
+                      {displayMode: true} : {};
+        script.insertAdjacentHTML("beforebegin",
+                                  katex.renderToString(text, options));
+      }
+    }
+    document.body.className += " math_finished";
+  </script>
+
+</footer>
