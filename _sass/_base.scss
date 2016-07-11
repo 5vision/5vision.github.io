@@ -37,6 +37,18 @@ ul, ol, dl, figure,
     margin-bottom: $spacing-unit / 2;
 }
 
+/**
+ * Tables
+ */
+.table-th-border {
+	border-collapse: collapse;
+    margin-right: auto;
+    margin-left: auto;
+	> table, th {
+        border-bottom: 1px solid black;
+		padding: 5px;
+	}
+}
 
 
 /**

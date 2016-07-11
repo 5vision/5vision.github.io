@@ -20,4 +20,22 @@
 	  .MathJax_Preview { color: #888 }
 	  .math_finished .MathJax_Preview { display: none }
 	</style>
+	
+    <!-- Pretty Photo -->
+    <script src="/js/jquery-1.6.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" href="/css/prettyPhoto.css" type="text/css" media="screen" charset="utf-8" />
+    <script src="/js/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>  
+    <script type="text/javascript" charset="utf-8">
+      $(document).ready(function(){
+  	  $("picture img").each(function(){
+  	    if (!$(this).attr('group')) return;
+		
+  	    var parent = $(this).parent();
+  	    parent.attr('rel', 'prettyPhoto[group_' + $(this).attr('group') + ']');
+  		parent.attr('href', parent.children().first().attr('srcset'));
+  	  });
+        $("picture[rel^='prettyPhoto']").prettyPhoto({theme:'pp_default',slideshow:5000,autoplay_slideshow:false,social_tools:false});
+      });
+    </script>
+	
 </head>

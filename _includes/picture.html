@@ -1,0 +1,5 @@
+<picture>
+  <source srcset="/images/fotos/{{ include.name }}-768.jpg" media="(min-width: 768px)">
+  <source srcset="/images/fotos/{{ include.name }}-320.jpg">
+  <img src="/images/fotos/{{ include.name }}-320.jpg" alt="{{ include.alt }}" group="{{ include.group }}" itemprop="image" />
+</picture>
