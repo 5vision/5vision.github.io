@@ -35,7 +35,7 @@ Architecture of the suggested Deep Attention Recurrent Q-Network (DARQN) consist
 ![The convolutional network architecture in DARQN](/assets/DARQN_CNN.png){:.center-image}
 
 Attention network takes ($$v^{i}_t$$, $$h_t$$) and determines relative importance of each corresponding area for the decision making process at the current moment of time. The resulting importance weights $$g^{i}_t$$ are used to calculate a context vector $$z_t$$ that is fed to the LSTM network. There are (at least) two ways how $$z_t$$ may be computed. In “soft” attention mechanism, $$z_t$$ is defined as a product of averaging all location vectors with $$g^{i}_t$$. In “hard” attention mechanism, $$z_t$$ is  equal to one of the $$v^{i}_t$$ with a probability defined by some $$g^{i}_t$$-parametrized probability distribution (e.g. categorical distribution).
-To visualize attention regions, we create 256 subsidiary features maps 7 × 7 filled by measured importance of each location vector $$v^{i}_t$$ and then upsample these maps through CNN layers (see Picture below, “soft” attention at the top and “hard” version at the bottom).
+To visualize attention regions, we create 256 subsidiary features maps 7 × 7 filled by measured importance of each location vector $$v^{i}_t$$ and then upsample these maps through CNN layers (see Picture below, “soft” attention at the top and “hard” version at the bottom, the corresponding game videos are available at our youtube [channel][darqn-youtube]).
 
 ![Visualization of attention regions](/assets/attention.png){:.center-image}
 
@@ -67,3 +67,5 @@ Our realization of DARQN is based on the [source code][dqn] and is available [on
 [darqn]: https://arxiv.org/abs/1512.01693
 
 [darqn-github]: https://github.com/5vision/DARQN
+
+[darqn-youtube]: https://www.youtube.com/playlist?list=PLKK-nv55ZMg583wK4Ny5sZu9YoFo27NBi
